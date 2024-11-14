@@ -1,0 +1,74 @@
+body{
+    background-color: #0e0f1b;
+}
+
+#title{
+    color: #88899e;
+    
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    
+    margin: auto;
+    transform: translate(-50%,-50%);
+}
+
+/* Planet with rays of light */
+.svg-light {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+}
+.ray {
+    stroke: #EE39BD; 
+    stroke-width: 0.1;
+}
+
+#svg-planets {
+    position: absolute;
+/*    left: 20%;*/
+/*    top: 30%;*/
+    
+/*    transform: translate(-50%,-50%);*/
+}
+
+.text {
+    position: absolute;
+    
+    color: white;
+    margin: auto;
+    font-size: 28px;
+    font-family: sans-serif;
+    font-weight: normal;
+
+    transform: translate(-50%,-50%);
+}
+@media (max-width: 1000px) {
+    .text {
+        font-size: 24px;
+    }
+}
+@media (max-width: 640px) {
+    .text {
+        font-size: 14px;
+    }
+}
+@media (max-width: 470px) {
+    .text {
+        font-size: 12px;
+    }
+}
+
+.land {
+    fill: #2a2a31;
+}
+
+#topic {
+    color: white;
+/*    display: none;*/
+    position: absolute;
+}

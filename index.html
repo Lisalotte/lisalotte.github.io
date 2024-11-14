@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Craftinaut's web space.">
+    
+    <!-- Icons & Mobile -->
+    <!-- For Chrome for Android: -->
+    <link rel="icon" sizes="192x192" href="touch-icon-192x192.png">
+    <!-- For iPhone 6 Plus with @3× display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="apple-touch-icon-180x180-precomposed.png">
+    <!-- For iPad with @2× display running iOS ≥ 7: -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png">
+    <!-- For iPad with @2× display running iOS ≤ 6: -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
+    <!-- For iPhone with @2× display running iOS ≥ 7: -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120-precomposed.png">
+    <!-- For iPhone with @2× display running iOS ≤ 6: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+    <!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≥ 7: -->
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76-precomposed.png">
+    <!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≤ 6: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png"><!-- 57×57px -->
+    
+	<!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>The Light of Life</title>
+    <script src="js/functions.js"></script>
+</head>
+ 
+<body onmousemove="mousePosition(event)" onmousedown="mouseDown(event)">
+    <svg class="svg-light" width=100% height=100% viewBox="0 0 100 100" preserveAspectRatio="none">
+        <polygon class="ray" id="light-1"/>
+        <polygon class="ray" id="light-2"/>
+        <polygon class="ray" id="light-3"/>
+        <image id="img1" href="images/VR.svg" width="18"/>
+        <!--text class="svg-text" id="text-3" x="25" y="50" text-anchor="middle" font-size="1">Virtual Reality</text-->
+        <polygon class="ray" id="light-4"/>
+        <polygon class="ray" id="light-5"/>
+        <polygon class="ray" id="light-6"/>
+        <polygon class="ray" id="light-7"/>
+        <polygon class="ray" id="light-8"/>
+        <polygon class="ray" id="light-9"/>
+        <polygon class="ray" id="light-10"/>
+        <polygon class="ray" id="light-11"/>
+        <polygon class="ray" id="light-12"/>
+        
+        <polygon class="land" points="0,95 100,80 100,100 0,100"/>
+        <polygon class="land" points="4,100 6.5,91 6,84 12,81 12,90 20,100"/>
+        <polygon class="land" points="0,0 -5,-10 -4,-24 0.5,-26 10,-16 9,0" style="transform: translate(75px,86px) scale(0.5,0.4);"/>
+        <polygon class="land" points="0,0 0,-10 4,-14 5,0" style="transform: translate(89px,85px) scale(0.3,0.5);"/>
+        Sorry, your browser does not support inline SVG.
+    </svg>
+    <svg id="svg-planets" width=300 height=300>
+        <circle id="planet" cx="150" cy="150" r="50" fill="#9F86DE"/>
+        <!--circle id="moon" cx="265" cy="90" r="13" fill="#9F86DE"/-->
+        Sorry, your browser does not support inline SVG.
+    </svg>
+    
+    <p id="topic"></p>
+    
+    <h1 id="title">
+        
+    </h1>
+    <!--h1 class="text" id="sub1" style="left: 20%; top: 20%;"> Virtual Reality </h1-->
+    <h1 class="text" id="sub2"> Crafts </h1>
+    <h1 class="text" id="sub3"> Graphics & <br> Interface Design </h1>
+    <h1 class="text" id="sub4"> Other Projects</h1>
+
+    <script> 
+        drawSVG(50, 30); 
+    </script>
+</body>
+</html>
