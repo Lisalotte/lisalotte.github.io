@@ -229,7 +229,7 @@ function mouseDown(e) {
                 }
             }
         }
-        window.setTimeout(function(){window.location.href = "./" + links[nr] + ".html";}, 500);
+        // window.setTimeout(function(){window.location.href = "./" + links[nr] + ".html";}, 500);
     }
 }
 
