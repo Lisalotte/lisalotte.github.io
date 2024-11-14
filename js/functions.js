@@ -15,23 +15,7 @@ function drawSVG(x, y) {
     document.getElementById("svg-planets").style.left = String(x) + '%';
     document.getElementById("svg-planets").style.top =  String(y) + '%';
     document.getElementById("svg-planets").style.transform = 'translate(-50%,-50%)';
-
-    var textx, texty;
-    /*
-    w = window.innerWidth;
-    h = window.innerHeight;
-    var fontsize = 1;
-
-    if (w < 500) {
-        fontsize = 1;
-    } else if (w < 800) {
-        fontsize = 2;
-    } else if (w < 1200) {
-        fontsize = 3;
-    } else {
-        fontsize = 4;
-    }*/
-
+    
     ray1 = [
         [xCen, yCen],
         [-10, 40],
@@ -52,10 +36,6 @@ function drawSVG(x, y) {
         [-10, 45]
     ];
     document.getElementById("light-3").setAttribute("points", String(xCen) + "," + String(yCen) + " 0,100 -10,45");
-    textx = xCen/2-10;
-    texty = (yCen+100)/2-5;
-    document.getElementById("img1").setAttribute("x", String(textx-10));
-    document.getElementById("img1").setAttribute("y", String(texty-10));
     
     var ray4 = [
         [xCen, yCen],
@@ -63,21 +43,13 @@ function drawSVG(x, y) {
         [0, 100]
     ];
     document.getElementById("light-4").setAttribute("points", String(xCen) + "," + String(yCen) + " 35,100 0,100");
-    textx = 35+(xCen-35)/2-7;
-    texty = (yCen+100)/2-5;
-    document.getElementById("sub2").style.setProperty("left", String(textx) + "%");
-    document.getElementById("sub2").style.setProperty("top", String(texty) + "%");
-
+    
     ray5 = [
         [xCen, yCen],
         [80, 100],
         [35, 100]
     ];
     document.getElementById("light-5").setAttribute("points", String(xCen) + "," + String(yCen) + " 80,100 35,100");
-    textx = 80+(xCen-80)/2-10;
-    texty = (yCen+100)/2-5;
-    document.getElementById("sub3").style.setProperty("left", String(textx) + "%");
-    document.getElementById("sub3").style.setProperty("top", String(texty) + "%");
     
     var ray6 = [
         [xCen, yCen],
@@ -85,10 +57,6 @@ function drawSVG(x, y) {
         [80, 100]
     ];
     document.getElementById("light-6").setAttribute("points", String(xCen) + "," + String(yCen) + " 150,100 80,100");
-    textx = 76;
-    texty = (yCen+100)/2-5;
-    document.getElementById("sub4").style.setProperty("left", String(textx) + "%");
-    document.getElementById("sub4").style.setProperty("top", String(texty) + "%");
     
     ray7 = [
         [xCen, yCen],
@@ -156,7 +124,7 @@ function angle(ray) {
     } else if (xR < 0 && yR > 0) {
         angleR = 360 - angleR;
     }
-    //console.log(angleR);
+    console.log(angleR);
     
     var angleL = Math.atan(xL/yL); 
     angleL = angleL * 180/Math.PI;
@@ -168,7 +136,7 @@ function angle(ray) {
     } else if (xL < 0 && yL > 0) {
         angleL = 360 - angleL;
     }
-    //console.log(angleL);
+    console.log(angleL);
     return ([angleL, angleR]);
 }
 
@@ -181,8 +149,8 @@ function writeText(coor, topic) {
     console.log("translate("+xCoor+"px, "+yCoor+"px);");
 }
 
-var topics = [0,0,"Virtual Reality", "Crafts", "Graphics \& Interface Design", "Other Projects",0,0,0,0,0,0,0];
-var links = [0,0,"vr", "crafts", "graphics", "other",0,0,0,0,0,0,0];
+var topics = [0,0,"What is Life?", "Biosignatures", "Exoplanets", "Telescopes and Techniques",0,0,0,0,0,0,0];
+var links = [0,0,"whatislife", "biosignatures", "exoplanets", "telescopes",0,0,0,0,0,0,0];
 var nr; // the index of the currently active ray.
 
 function animateRays(coor) {
@@ -214,15 +182,14 @@ function animateRays(coor) {
             nr = i;
         } else {
             document.getElementById("light-"+(i+1)).style.display="block";
+            document.getElementById("topic").style.display="none";
         }
     }
-    /*
     if (topics[nr]) { 
         document.getElementById("title").innerHTML=topics[nr]; 
     } else {
         document.getElementById("title").innerHTML="The Light of Life.";
     }
-    */
 }
 
 // Mouse move event
