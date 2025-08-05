@@ -40,14 +40,14 @@ html {
     opacity: 10%;
 }
 
-#main-container {
+.main-container {
     position: absolute;
     width: 100%;
     height: 100%;
     overflow-y: auto;
 }
 
-#content-container {
+.content-container {
     position: relative;
     width: 60%;
     height: 90vh;
