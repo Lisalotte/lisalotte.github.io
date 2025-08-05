@@ -1,27 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html  lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Detecting biosignatures on exoplanets.">
+	<meta name="description" content="">
     
 	<!-- CSS Files -->
+    <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/style.css">
     
-    <title>The Light of Life</title>
+    <title>Lisa's portfolio</title>
+    
     <script src="js/functions.js"></script>
 </head>
  
 <body onmousemove="mousePosition(event)" onmousedown="mouseDown(event)">
     
-    <p id="topic"></p>
-    
     <h1 id="title">
-        The Light of Life.
+        Lisa
     </h1>
+    <div id="circle-container">
+    </div>
+    
+    <svg class="details-container" width=100% height=100%>
+        <circle class="bg-circle" cx="50%" r="400" cy="50%" fill="#9F86DE" />
+    </svg>
+    
     <script> 
-        drawSVG(20, 30); 
+        spawnCircles(); 
     </script>
 </body>
 </html>
