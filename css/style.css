@@ -49,16 +49,26 @@ html {
 
 .content-container {
     position: relative;
-    width: 60%;
-    height: 90vh;
-    margin-top: 5vh;
-    padding-top: 80vh;
+    width: 70%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 20rem;
     margin-left: auto;
     margin-right: auto;    
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    /* gap: 2rem; */
+    gap: 0.4rem;
     /* overflow-y: auto; */
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    width: 95%;
+    grid-template-columns: 1fr;
+  }
 }
 
 #container-bg {
@@ -66,7 +76,7 @@ html {
     position: absolute;
     background-color: var(--main-color);
     opacity: 25%;
-    inset: 0;
+    inset: 0%;
     border-radius: 4px;
 }
 
