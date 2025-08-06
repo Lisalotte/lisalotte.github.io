@@ -72,6 +72,9 @@
     animateCircles();
   }
 
+  spawnCircles();
+
+
   // Opening and closing content
   const development = document.getElementById("development");
   const artworks = document.getElementById("artworks");
