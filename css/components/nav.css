@@ -62,8 +62,8 @@
 }
 
 .nav__arrow-icon {
-    width: 64px;
-    height: 64px;
+    width: 52px;
+    height: 52px;
     display: block;
 }
 
@@ -81,13 +81,19 @@
     right: 72px;
 }
 
-
 @media (max-width: 1440px) {
-    .nav__label {
-        font-size: 1.25rem;
-    }
     .nav__arrow-icon {
-        width: 52px;
-        height: 52px;
+        width: 32px;
+        height: 32px;
+    }
+    
+    .nav__label--down {
+        bottom: 52px;
+    }
+    .nav__label--left {
+        left: 52px;
+    }
+    .nav__label--right {
+        right: 52px;
     }
 }

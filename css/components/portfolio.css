@@ -38,6 +38,7 @@
 @media (max-width: 768px) {
     .portfolio__images {
         grid-template-columns: 1fr;
+        gap: 12px;
     }
 
     .portfolio__images--two-cols {
@@ -77,8 +78,15 @@
 }
 
 .portfolio__arrow--wrapper {
-    position: absolute;
+    position: fixed;
     width: 100%;
+    top: 0;
+    z-index: 1000;
+    visibility: hidden;
+}
+
+.portfolio__arrow--wrapper-visible {
+    visibility: visible;
 }
 
 .portfolio__arrow {

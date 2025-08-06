@@ -7,8 +7,9 @@
 }
 
 .header--large {
-    font-size: var(--text-3xl);
-    line-height: 64px;
+    font-size: var(--text-lg);
+    font-weight: var(--font-medium);
+    line-height: 1.2;
 }
 
 .header--medium {
@@ -82,9 +83,15 @@
     margin: 0;
 }
 
-@media (max-width: 1152px) {
+@media (max-width: 1440px) {
     .header--large {
-        font-size: var(--text-2xl);
-        line-height: 44px;
+        font-size: var(--text-md);
+        font-weight: var(--font-medium);
+        line-height: 1.2;
+    }
+    .header--small {
+        font-size: var(--text-base);
+        font-weight: var(--font-medium);
+        line-height: 28px;
     }
 }

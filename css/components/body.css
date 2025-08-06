@@ -62,9 +62,6 @@ html {
     position: absolute;
     left: 50%;
     top: 50%;
-    font-size: var(--text-lg);
-    font-weight: var(--font-medium);
-    line-height: 1.2;
 
     margin: auto;
     transform: translate(-50%,-50%);

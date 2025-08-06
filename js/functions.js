@@ -80,9 +80,7 @@
   const artworks = document.getElementById("artworks");
 
   document.addEventListener("DOMContentLoaded", function () {
-    const graphicDesignButtonClose = document.getElementById("graphicDesignButtonClose");
-    const devButtonClose = document.getElementById("devButtonClose");
-    const artButtonClose = document.getElementById("artButtonClose");
+    const closeButton = document.getElementById("closeButton");
 
     const graphicDesign = document.getElementById("graphicDesign");
     const development = document.getElementById("development");
@@ -95,8 +93,10 @@
     function toggleSection(section) {
       if (section.classList.contains("portfolio__container--closed")) {
         section.classList.remove("portfolio__container--closed");
+        if (!closeButton.classList.contains("portfolio__arrow--wrapper-visible")) closeButton.classList.add("portfolio__arrow--wrapper-visible");
       } else {
         section.classList.add("portfolio__container--closed");
+        if (closeButton.classList.contains("portfolio__arrow--wrapper-visible")) closeButton.classList.remove("portfolio__arrow--wrapper-visible");
       }
     }
 
@@ -121,22 +121,6 @@
       });
     }
 
-    if (graphicDesignButtonClose) {
-      graphicDesignButtonClose.addEventListener("click", function () {
-        toggleSection(graphicDesign);
-      });
-    }
-    if (devButtonClose) {
-      devButtonClose.addEventListener("click", function () {
-        toggleSection(development);
-      });
-    }
-    if (artButtonClose) {
-      artButtonClose.addEventListener("click", function () {
-        toggleSection(artworks);
-      });
-    }
-
     function closeAll() {
       if (!graphicDesign.classList.contains("portfolio__container--closed")) {
         graphicDesign.classList.add("portfolio__container--closed");
@@ -147,9 +131,14 @@
       if (!artworks.classList.contains("portfolio__container--closed")) {
         artworks.classList.add("portfolio__container--closed");
       }
+      if (closeButton.classList.contains("portfolio__arrow--wrapper-visible")) closeButton.classList.remove("portfolio__arrow--wrapper-visible");
     }
 
-    // Close modal when pressing ESC key
+    if (closeButton) {
+      closeButton.addEventListener("click", closeAll);
+    }
+
+    // Close when pressing ESC key
     document.addEventListener('keydown', function(event) {
       if (event.key === 'Escape') {
         closeAll();

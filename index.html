@@ -10,9 +10,9 @@
 <body>
 
     <main>
-        <h1 class="header title">
-            lisa <br>
-            pothoven
+        <h1 class="header header--large title">
+            lisa's <br>
+            portfolio
         </h1>
 
         <div id="circle-container">
@@ -31,14 +31,14 @@
                 <img src="icons/chevron.svg" alt="" class="nav__arrow-icon" draggable="false">
             </button>
 
-            <h2 class="header nav__label nav__label--left">
+            <h2 class="header header--small nav__label nav__label--left">
                 art
             </h2>
             <button class="nav__arrow nav__arrow--left" id="artButton" aria-label="Open menu">
                 <img src="icons/chevron.svg" alt="" class="nav__arrow-icon" draggable="false">
             </button>
 
-            <h2 class="header nav__label nav__label--right">
+            <h2 class="header header--small nav__label nav__label--right">
                 coding
             </h2>
             <button class="nav__arrow nav__arrow--right" id="devButton" aria-label="Open menu">
@@ -46,12 +46,13 @@
             </button>
         </div>
 
+        <div id="closeButton" class="portfolio__arrow--wrapper">
+            <button class="portfolio__arrow portfolio__arrow--down" id="graphicDesignButtonClose" aria-label="Close portfolio">
+                <img src="icons/chevron.svg" alt="" class="nav__arrow-icon" draggable="false">
+            </button>
+        </div>
+
         <section id="graphicDesign" class="portfolio__container portfolio__container--closed">
-            <div class="portfolio__arrow--wrapper">
-                <button class="portfolio__arrow portfolio__arrow--down" id="graphicDesignButtonClose" aria-label="Close portfolio">
-                    <img src="icons/chevron.svg" alt="" class="nav__arrow-icon" draggable="false">
-                </button>
-            </div>
 
             <div class="portfolio__images">
                 <div class="portfolio__image--wrapper">
@@ -88,12 +89,6 @@
 
         <section id="development" class="portfolio__container portfolio__container--closed">
 
-            <div class="portfolio__arrow--wrapper">
-                <button class="portfolio__arrow portfolio__arrow--down" id="devButtonClose" aria-label="Close portfolio">
-                    <img src="icons/chevron.svg" alt="" class="nav__arrow-icon" draggable="false">
-                </button>
-            </div>
-
             <div class="portfolio__images portfolio__images--two-cols">
                 <div class="portfolio__image--wrapper">
                     <img class="portfolio__image" src="images/CatCave.png"/>
@@ -121,12 +116,6 @@
         </section>
 
         <section id="artworks" class="portfolio__container portfolio__container--closed">
-
-            <div class="portfolio__arrow--wrapper">
-                <button class="portfolio__arrow portfolio__arrow--down" id="artButtonClose" aria-label="Close portfolio">
-                    <img src="icons/chevron.svg" alt="" class="nav__arrow-icon" draggable="false">
-                </button>
-            </div>
 
             <div class="portfolio__images">
                 <div class="portfolio__image--wrapper">
