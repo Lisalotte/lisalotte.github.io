@@ -1,0 +1,111 @@
+.button {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 11px 24px;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Primary Button */
+.button--primary {
+    background-color: var(--color-yellow);
+    border-color: var(--color-yellow);
+    color: var(--color-teal);
+}
+
+.button--primary:hover {
+    background-color: var(--color-yellow-hover);
+    border-color: var(--color-yellow-hover);
+}
+
+.button--primary:focus {
+    outline: none;
+}
+
+@supports (background-color: color-mix(in srgb, black 10%, white 90%)) {
+    .button--primary:hover {
+        background-color: color-mix(in srgb, var(--color-yellow) 90%, black 10%);
+        border-color: color-mix(in srgb, var(--color-yellow) 90%, black 10%);
+    }
+}
+
+/* Outline Button */
+.button--outline {
+    background-color: transparent;
+    border-color: var(--color-teal);
+    color: var(--color-teal);
+}
+
+.button--outline:hover {
+    background-color: var(--color-teal);
+    border-color: var(--color-teal);
+    color: var(--color-white);
+}
+
+.button--outline:focus {
+    outline: none;
+}
+
+.button--outline-white {
+    background-color: transparent;
+    border-color: var(--color-white);
+    color: var(--color-white);
+}
+
+.button--outline-white:hover {
+    background-color: var(--color-white);
+    border-color: var(--color-white);
+    color: var(--color-teal);
+}
+
+.button--outline-white:focus {
+    outline: none;
+}
+
+/* Ghost Button */
+.button--ghost {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--color-teal);
+}
+
+.button--ghost:hover {
+    text-decoration: underline;
+}
+
+.button--ghost:focus {
+    outline: none;
+}
+
+.button--ghost-white {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--color-white);
+}
+
+.button--ghost-white:hover {
+    text-decoration: underline;
+}
+
+.button--ghost-white:focus {
+    outline: none;
+}
+
+/* Disabled Button */
+.button--disabled {
+    background-color: var(--color-teal-medium);
+    border-color: var(--color-teal-medium);
+    color: var(--color-white);
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Responsive styles */
+@media (max-width: 800px) {
+    .button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,47 @@
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+}
+
+.container--narrow {
+    max-width: var(--container-width-narrow);
+}
+
+.container--intro {
+    max-width: var(--container-width-intro);
+}
+
+@media (max-width: 1152px) {
+    :root {
+        --container-width: 1024px;
+        --container-padding: 80px;
+    }
+
+    .container--intro {
+        max-width: var(--container-width);
+    }
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --container-width: 800px;
+        --container-padding: 32px;
+    }
+}
+
+@media (max-width: 800px) {
+    :root {
+        --container-width: 552px;
+        --container-padding: 32px;
+    }
+}
+
+@media (max-width: 640px) {
+    :root {
+        --container-padding: 0;
+    }
+}

@@ -1,92 +1,126 @@
 <!DOCTYPE html>
-<html  lang="en">
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-    
-	<!-- CSS Files -->
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/style.css">
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lisa's portfolio</title>
-    
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/functions.js"></script>
 </head>
  
-<body onmousemove="mousePosition(event)" onmousedown="mouseDown(event)">
-    
-    <h1 id="title">
-        <!-- Lisa -->
-    </h1>
-    <div id="circle-container">
-    </div>
-    
-    <svg class="details-container" width=100% height=100%>
-        <circle class="bg-circle" cx="50%" r="400" cy="50%" fill="#9F86DE" />
-    </svg>
+<body>
 
-    <div class="main-container" >
-        <!-- <p>v Scroll v</p> -->
-        <div class="setion content-container" style="text-align: center;">
-            
-            <img class="inline-image" src="images/CatCave.png"/>
-            <img class="inline-image" src="images/CatCave2.png"/>
+    <main>
+        <h1 id="title">
+            <!-- Lisa -->
+        </h1>
 
-            <img class="inline-image" src="images/Mars2.4.png"/>
-            <img class="inline-image" src="images/Title_poster.jpg"/>
-            <img class="inline-image" src="images/catwork-01.png"/>
-            <img class="inline-image" src="images/draakjes.png"/>
-
-            <img class="inline-image" src="images/DSC00061.jpg"/>
-            <img class="inline-image" src="images/DSC00074.jpg"/>
-            <img class="inline-image" src="images/DSC07537.jpg"/>
-            <img class="inline-image" src="images/DSC07551.jpg"/>
-
-            <img class="inline-image" src="images/EAS2020_v3.jpg"/>
-            <img class="inline-image" src="images/IAU05.jpg"/>
-
-            <img class="inline-image" src="images/IJsvogeltje.jpg"/>
-            <img class="inline-image" src="images/kamvas.jpg"/>
-            <img class="inline-image" src="images/kamvas4.jpg"/>
-            <img class="inline-image" src="images/Light of Life.jpg"/>
-
-
-            <img class="inline-image" src="images/MilkyWay.png"/>
-
-            <img class="inline-image" src="images/monsters.jpg"/>
-            <img class="inline-image" src="images/Ninetales.jpg"/>
-
-            <img class="inline-image" src="images/koi.jpg"/>
-
-            <img class="inline-image" src="images/OD17.jpg"/>
-            <img class="inline-image" src="images/OD18_4.jpg"/>
-
-            <img class="inline-image" src="images/Prikkeldraad.jpg"/>
-            <img class="inline-image" src="images/Sammy.jpg"/>
-
-            <!-- <img class="inline-image" src="images/Serenity Transportation-01.png"/> -->
-            <img class="inline-image" src="images/John Smith.png"/>
-
-            <!-- <img class="inline-image" src="images/aliensound.png"/> -->
-            <img class="inline-image" src="images/Brown Industries-01.png"/>
-
-            <img class="inline-image" src="images/space_machine.jpg"/>
-            <img class="inline-image" src="images/The Tree.jpg"/>
-
-            <img class="inline-image" src="images/watercoloursky.jpg"/>
-
-            <img class="inline-image" src="images/citagezze.png"/>
-
-
-            <div id="container-bg" />
+        <div id="circle-container">
         </div>
-        
-    </div>
 
-    <script> 
-        spawnCircles(); 
+        <svg class="details-container" width=100% height=100%>
+            <circle class="bg-circle" cx="50%" r="400" cy="50%" fill="#9F86DE" />
+        </svg>
+
+        <div class="nav">
+            <button class="nav__arrow nav__arrow--down" aria-label="Open menu">
+                <img src="icons/arrow-right.svg" alt="" class="nav__arrow-icon" draggable="false">
+            </button>
+
+            <button class="nav__arrow nav__arrow--left" aria-label="Open menu">
+                <img src="icons/arrow-right.svg" alt="" class="nav__arrow-icon" draggable="false">
+            </button>
+
+            <button class="nav__arrow nav__arrow--right" aria-label="Open menu">
+                <img src="icons/arrow-right.svg" alt="" class="nav__arrow-icon" draggable="false">
+            </button>
+        </div>
+
+        <section id="graphic-design" class="portfolio__container portfolio__container--closed">
+            <div class="portfolio__images">
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image" src="images/catwork-01.png"/>
+                </div>
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image" src="images/draakjes.png"/>
+                </div>
+                <img class="portfolio__image" src="images/Brown Industries-01.png"/>
+                <img class="portfolio__image" src="images/John Smith.png"/>
+
+                <img class="portfolio__image" src="images/EAS2020_v3.jpg"/>
+                <img class="portfolio__image" src="images/IAU05.jpg"/>
+
+                <img class="portfolio__image" src="images/Sammy.jpg"/>
+
+                <img class="portfolio__image" src="images/OD17.jpg"/>
+                <img class="portfolio__image" src="images/OD18_4.jpg"/>
+            </div>
+
+        </section>
+
+        <section id="development" class="portfolio__container portfolio__container--closed">
+            <div class="portfolio__images">
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image" src="images/CatCave.png"/>
+                </div>
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image" src="images/CatCave2.png"/>
+                </div>
+
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image" src="images/Mars2.4.png"/>
+                </div>
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image" src="images/Title_poster.jpg"/>
+                </div>
+
+
+                <img class="portfolio__image" src="images/DSC07537.jpg"/>
+                <img class="portfolio__image" src="images/DSC07551.jpg"/>
+
+            </div>
+        </section>
+
+        <section id="artworks" class="portfolio__container portfolio__container--closed">
+            <div class="portfolio__image--wrapper">
+                <img class="portfolio__image" src="images/IJsvogeltje.jpg"/>
+            </div>
+            <div class="portfolio__image--wrapper">
+                <img class="portfolio__image" src="images/kamvas.jpg"/>
+            </div>
+            <div class="portfolio__image--wrapper">
+                <img class="portfolio__image" src="images/Light of Life.jpg"/>
+            </div>
+            <div class="portfolio__image--wrapper">
+                <img class="portfolio__image" src="images/MilkyWay.png"/>
+            </div>
+            <div class="portfolio__image--wrapper">
+                <img class="portfolio__image" src="images/koi.jpg"/>
+            </div>
+            <div class="portfolio__image--wrapper">
+                <img class="portfolio__image" src="images/Prikkeldraad.jpg"/>
+            </div>
+            <div class="portfolio__image--wrapper">
+
+            </div>
+            <div class="portfolio__image--wrapper">
+
+            </div>
+            <div class="portfolio__image--wrapper">
+
+            </div>
+            <img class="portfolio__image" src="images/watercoloursky.jpg"/>
+
+            <img class="portfolio__image" src="images/citagezze.png"/>
+
+            <img class="portfolio__image" src="images/space_machine.jpg"/>
+            <img class="portfolio__image" src="images/The Tree.jpg"/>
+        </section>
+
+    </main>
+
+    <script>
+        spawnCircles();
     </script>
 </body>
 </html>

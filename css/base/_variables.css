@@ -1,0 +1,42 @@
+:root {
+    /* Colors */
+    --color-orange-dark: #A74311;
+    --color-orange-light: #DB7123;
+    --color-blue-dark: #0e0f1b;
+    --color-blue-light: #27293f;
+    --color-black: #0c0809;
+    --color-beige: #FCD89E;
+
+    /* Theme Colors */
+    --main-color: var(--color-black);
+    --accent-color: var(--color-beige);
+    --bg-color-outside: var(--color-orange-dark);
+    --bg-color-inside: var(--color-orange-light);
+    
+    /* Font Family */
+    --font-primary: 'Outfit', sans-serif;
+    
+    /* Font Weights */
+    --font-regular: 400;
+    --font-bold: 700;
+    --font-black: 900;
+    
+    /* Font Sizes */
+    --text-xs: 0.75rem;      /* 12px */
+    --text-sm: 0.875rem;     /* 14px */
+    --text-base: 1rem;       /* 16px */
+    --text-lg: 1.5rem;       /* 24px */
+    --text-xl: 2.25rem;      /* 36px */
+    --text-2xl: 2.5rem;      /* 40px */
+    --text-3xl: 3.75rem;     /* 60px */
+
+    /* Letter Spacing */
+    --tracking-normal: 0.02em;  /* 2% */
+    --tracking-wide: 0.12em;    /* 12% */
+    
+    /* Container */
+    --container-width: 1280px;          /* 1152px after padding */ 
+    --container-width-narrow: 896px;    /* 768px after padding */
+    --container-width-intro: 896px;     /* 768px after padding */
+    --container-padding: 64px;
+}

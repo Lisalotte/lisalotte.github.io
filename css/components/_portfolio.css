@@ -1,0 +1,50 @@
+.portfolio__container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.portfolio__container--closed {
+    display: none;
+}
+
+.portfolio__images {
+    position: relative;
+    width: 70%;
+    padding: 1%;
+    margin-top: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .portfolio__images {
+        width: 95%;
+        grid-template-columns: 1fr;
+    }
+}
+
+.portfolio__image--wrapper {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+    display: flex;
+    flex-basis: 20%;
+    flex-grow: 1;
+}
+
+.portfolio__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+    display: flex;
+    flex-basis: 20%;
+    flex-grow: 1;
+}

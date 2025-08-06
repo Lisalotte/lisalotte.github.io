@@ -1,0 +1,50 @@
+.nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 40%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 12px 0 12px;
+}
+
+.nav__arrow {
+    position: absolute;
+    border-radius: 8px;
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.nav__arrow--down {
+    bottom: 0;
+    transform: rotate(90deg);
+}
+
+.nav__arrow--left {
+    transform: rotate(180deg);
+    left: 0;
+}
+
+.nav__arrow--right {
+    right: 0;
+}
+
+.nav__arrow-down:hover {
+    background-color: var(--color-orange-light);
+}
+
+.nav__arrow-icon {
+    width: 72px;
+    height: 72px;
+    display: block;
+}
