@@ -1,30 +1,46 @@
 .portfolio__container {
     position: absolute;
+    background-color: var(--color-black-opacity);
     width: 100%;
-    height: 100%;
+    max-height: 100vh;
     overflow-y: auto;
+    z-index: 100;
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease, z-index 0.3s ease;
+    visibility: visible;
 }
 
 .portfolio__container--closed {
-    display: none;
+    /*display: none;*/
+    transform: scale(0.95);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
 }
 
 .portfolio__images {
     position: relative;
-    width: 70%;
-    padding: 1%;
-    margin-top: 20rem;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 24px;
-    align-items: center;
+    align-items: start;
+
+    max-width: var(--container-width);
+    padding: var(--container-padding);
+    margin: 5rem auto;
+}
+
+.portfolio__images--two-cols {
+    grid-template-columns: 1fr 1fr;
 }
 
 @media (max-width: 768px) {
     .portfolio__images {
-        width: 95%;
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio__images--two-cols {
         grid-template-columns: 1fr;
     }
 }
@@ -35,16 +51,59 @@
     object-fit: cover;
     border-radius: 2px;
     display: flex;
+    flex-direction: column;
     flex-basis: 20%;
     flex-grow: 1;
+    overflow: hidden;
 }
 
 .portfolio__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 2px;
+}
+
+.portfolio__image--contain {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.portfolio__image--cover-left {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.portfolio__arrow--wrapper {
+    position: absolute;
+    width: 100%;
+}
+
+.portfolio__arrow {
+    position: relative;
+    border-radius: 8px;
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
     display: flex;
-    flex-basis: 20%;
-    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    transform: rotate(180deg);
+
+    transition: margin-top 0.3s ease;
+}
+
+.portfolio__arrow:hover {
+    margin-top: -12px;
+}
+
+.portfolio__arrow-icon {
+    width: 64px;
+    height: 64px;
+    display: block;
 }

@@ -58,12 +58,13 @@ html {
     vertical-align: middle;
 }
 
-#title{
-    color: var(--main-color);
-
+.title{
     position: absolute;
     left: 50%;
-    top: 30%;
+    top: 50%;
+    font-size: var(--text-lg);
+    font-weight: var(--font-medium);
+    line-height: 1.2;
 
     margin: auto;
     transform: translate(-50%,-50%);

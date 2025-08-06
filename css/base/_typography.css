@@ -1,6 +1,7 @@
 /* Header */
 .header {
     font-family: var(--font-primary);
+    color: var(--accent-color);
     margin: 0;
     overflow-wrap: anywhere;
 }

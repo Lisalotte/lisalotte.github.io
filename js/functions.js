@@ -1,4 +1,5 @@
   const SVG_NS = "http://www.w3.org/2000/svg";
+  const circles = [];
 
   function spawnCircle(parent, s) {
 
@@ -20,7 +21,34 @@
     // circle.setAttribute("fill", '--accent-color');
 
     parent.appendChild(circle);
+
+    // Store circle's movement data
+    circles.push({
+      element: circle,
+      cx: x,
+      cy: y,
+      speedX: (Math.random() - 0.5) * 0.3,
+      speedY: (Math.random() - 0.5) * 0.3,
+    });
+
   }
+
+  function animateCircles() {
+    circles.forEach((c) => {
+      c.cx += c.speedX;
+      c.cy += c.speedY;
+
+      // Bounce the circles back if they hit the edge of the screen
+      if (c.cx < 0 || c.cx > window.innerWidth) c.speedX *= -1;
+      if (c.cy < 0 || c.cy > window.innerHeight) c.speedY *= -1;
+
+      c.element.setAttribute("cx", c.cx);
+      c.element.setAttribute("cy", c.cy);
+    });
+
+    requestAnimationFrame(animateCircles);
+  }
+
 
   function spawnCircles() {
     
@@ -39,4 +67,89 @@
     }
 
     circleContainer.appendChild(svg);
+
+    // Start animation
+    animateCircles();
   }
+
+  // Opening and closing content
+  const development = document.getElementById("development");
+  const artworks = document.getElementById("artworks");
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const graphicDesignButtonClose = document.getElementById("graphicDesignButtonClose");
+    const devButtonClose = document.getElementById("devButtonClose");
+    const artButtonClose = document.getElementById("artButtonClose");
+
+    const graphicDesign = document.getElementById("graphicDesign");
+    const development = document.getElementById("development");
+    const artworks = document.getElementById("artworks");
+
+    const graphicDesignButton = document.getElementById("graphicDesignButton");
+    const developmentButton = document.getElementById("devButton");
+    const artworksButton = document.getElementById("artButton");
+
+    function toggleSection(section) {
+      if (section.classList.contains("portfolio__container--closed")) {
+        section.classList.remove("portfolio__container--closed");
+      } else {
+        section.classList.add("portfolio__container--closed");
+      }
+    }
+
+    // Graphic Design Section
+    if (graphicDesignButton) {
+      graphicDesignButton.addEventListener("click", function () {
+        toggleSection(graphicDesign);
+      });
+    }
+
+    // Development Section
+    if (developmentButton) {
+      developmentButton.addEventListener("click", function () {
+        toggleSection(development);
+      });
+    }
+
+    // Artworks Section
+    if (artworksButton) {
+      artworksButton.addEventListener("click", function () {
+        toggleSection(artworks);
+      });
+    }
+
+    if (graphicDesignButtonClose) {
+      graphicDesignButtonClose.addEventListener("click", function () {
+        toggleSection(graphicDesign);
+      });
+    }
+    if (devButtonClose) {
+      devButtonClose.addEventListener("click", function () {
+        toggleSection(development);
+      });
+    }
+    if (artButtonClose) {
+      artButtonClose.addEventListener("click", function () {
+        toggleSection(artworks);
+      });
+    }
+
+    function closeAll() {
+      if (!graphicDesign.classList.contains("portfolio__container--closed")) {
+        graphicDesign.classList.add("portfolio__container--closed");
+      }
+      if (!development.classList.contains("portfolio__container--closed")) {
+        development.classList.add("portfolio__container--closed");
+      }
+      if (!artworks.classList.contains("portfolio__container--closed")) {
+        artworks.classList.add("portfolio__container--closed");
+      }
+    }
+
+    // Close modal when pressing ESC key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeAll();
+      }
+    });
+  });

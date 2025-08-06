@@ -11,55 +11,91 @@
 <body>
 
     <main>
-        <h1 id="title">
-            <!-- Lisa -->
+        <h1 class="header title">
+            lisa <br>
+            pothoven
         </h1>
 
         <div id="circle-container">
         </div>
 
         <svg class="details-container" width=100% height=100%>
-            <circle class="bg-circle" cx="50%" r="400" cy="50%" fill="#9F86DE" />
+            <circle class="bg-circle" cx="50%" r="16%" cy="50%" fill="#9F86DE" />
         </svg>
 
         <div class="nav">
-            <button class="nav__arrow nav__arrow--down" aria-label="Open menu">
-                <img src="icons/arrow-right.svg" alt="" class="nav__arrow-icon" draggable="false">
+
+            <h2 class="header header--small nav__label nav__label--down">
+                graphic design
+            </h2>
+            <button class="nav__arrow nav__arrow--down" id="graphicDesignButton" aria-label="Open Graphic Design">
+                <img src="icons/chevron.svg" alt="" class="nav__arrow-icon" draggable="false">
             </button>
 
-            <button class="nav__arrow nav__arrow--left" aria-label="Open menu">
-                <img src="icons/arrow-right.svg" alt="" class="nav__arrow-icon" draggable="false">
+            <h2 class="header nav__label nav__label--left">
+                art
+            </h2>
+            <button class="nav__arrow nav__arrow--left" id="artButton" aria-label="Open menu">
+                <img src="icons/chevron.svg" alt="" class="nav__arrow-icon" draggable="false">
             </button>
 
-            <button class="nav__arrow nav__arrow--right" aria-label="Open menu">
-                <img src="icons/arrow-right.svg" alt="" class="nav__arrow-icon" draggable="false">
+            <h2 class="header nav__label nav__label--right">
+                coding
+            </h2>
+            <button class="nav__arrow nav__arrow--right" id="devButton" aria-label="Open menu">
+                <img src="icons/chevron.svg" alt="" class="nav__arrow-icon" draggable="false">
             </button>
         </div>
 
-        <section id="graphic-design" class="portfolio__container portfolio__container--closed">
+        <section id="graphicDesign" class="portfolio__container portfolio__container--closed">
+            <div class="portfolio__arrow--wrapper">
+                <button class="portfolio__arrow portfolio__arrow--down" id="graphicDesignButtonClose" aria-label="Close portfolio">
+                    <img src="icons/chevron.svg" alt="" class="nav__arrow-icon" draggable="false">
+                </button>
+            </div>
+
             <div class="portfolio__images">
-                <div class="portfolio__image--wrapper">
-                    <img class="portfolio__image" src="images/catwork-01.png"/>
-                </div>
                 <div class="portfolio__image--wrapper">
                     <img class="portfolio__image" src="images/draakjes.png"/>
                 </div>
-                <img class="portfolio__image" src="images/Brown Industries-01.png"/>
-                <img class="portfolio__image" src="images/John Smith.png"/>
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image" src="images/EAS2020_v3.jpg"/>
+                </div>
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image--contain" src="images/Brown Industries-01.png"/>
+                    <img class="portfolio__image--contain" src="images/John Smith.png"/>
+                </div>
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image" src="images/catwork-01.png"/>
+                </div>
 
-                <img class="portfolio__image" src="images/EAS2020_v3.jpg"/>
-                <img class="portfolio__image" src="images/IAU05.jpg"/>
 
-                <img class="portfolio__image" src="images/Sammy.jpg"/>
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image" src="images/IAU05.jpg"/>
+                </div>
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image" src="images/Sammy.jpg"/>
+                </div>
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image" src="images/OD17.jpg"/>
+                </div>
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image" src="images/OD18_4.jpg"/>
+                </div>
 
-                <img class="portfolio__image" src="images/OD17.jpg"/>
-                <img class="portfolio__image" src="images/OD18_4.jpg"/>
             </div>
 
         </section>
 
         <section id="development" class="portfolio__container portfolio__container--closed">
-            <div class="portfolio__images">
+
+            <div class="portfolio__arrow--wrapper">
+                <button class="portfolio__arrow portfolio__arrow--down" id="devButtonClose" aria-label="Close portfolio">
+                    <img src="icons/chevron.svg" alt="" class="nav__arrow-icon" draggable="false">
+                </button>
+            </div>
+
+            <div class="portfolio__images portfolio__images--two-cols">
                 <div class="portfolio__image--wrapper">
                     <img class="portfolio__image" src="images/CatCave.png"/>
                 </div>
@@ -75,46 +111,54 @@
                 </div>
 
 
-                <img class="portfolio__image" src="images/DSC07537.jpg"/>
-                <img class="portfolio__image" src="images/DSC07551.jpg"/>
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image" src="images/DSC07537.jpg"/>
+                </div>
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image" src="images/DSC07551.jpg"/>
+                </div>
 
             </div>
         </section>
 
         <section id="artworks" class="portfolio__container portfolio__container--closed">
-            <div class="portfolio__image--wrapper">
-                <img class="portfolio__image" src="images/IJsvogeltje.jpg"/>
+
+            <div class="portfolio__arrow--wrapper">
+                <button class="portfolio__arrow portfolio__arrow--down" id="artButtonClose" aria-label="Close portfolio">
+                    <img src="icons/chevron.svg" alt="" class="nav__arrow-icon" draggable="false">
+                </button>
             </div>
-            <div class="portfolio__image--wrapper">
-                <img class="portfolio__image" src="images/kamvas.jpg"/>
-            </div>
-            <div class="portfolio__image--wrapper">
-                <img class="portfolio__image" src="images/Light of Life.jpg"/>
-            </div>
-            <div class="portfolio__image--wrapper">
-                <img class="portfolio__image" src="images/MilkyWay.png"/>
-            </div>
-            <div class="portfolio__image--wrapper">
-                <img class="portfolio__image" src="images/koi.jpg"/>
-            </div>
-            <div class="portfolio__image--wrapper">
-                <img class="portfolio__image" src="images/Prikkeldraad.jpg"/>
-            </div>
-            <div class="portfolio__image--wrapper">
+
+            <div class="portfolio__images">
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image" src="images/IJsvogeltje.jpg"/>
+                </div>
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image" src="images/kamvas.jpg"/>
+                </div>
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image" src="images/Light of Life.jpg"/>
+                </div>
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image" src="images/MilkyWay.png"/>
+                </div>
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image" src="images/koi.jpg"/>
+                </div>
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image--cover-left" src="images/Prikkeldraad.jpg"/>
+                </div>
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image" src="images/watercoloursky.jpg"/>
+                </div>
+                <div class="portfolio__image--wrapper">
+                    <img class="portfolio__image" src="images/space_machine.jpg"/>
+                </div>
+<!--                <div class="portfolio__image&#45;&#45;wrapper">-->
+<!--                    <img class="portfolio__image" src="images/The Tree.jpg"/>-->
+<!--                </div>-->
 
             </div>
-            <div class="portfolio__image--wrapper">
-
-            </div>
-            <div class="portfolio__image--wrapper">
-
-            </div>
-            <img class="portfolio__image" src="images/watercoloursky.jpg"/>
-
-            <img class="portfolio__image" src="images/citagezze.png"/>
-
-            <img class="portfolio__image" src="images/space_machine.jpg"/>
-            <img class="portfolio__image" src="images/The Tree.jpg"/>
         </section>
 
     </main>
