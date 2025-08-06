@@ -1,15 +1,15 @@
 /* Base */
-@import 'base/_normalize.css';
-@import 'base/_variables.css';
-@import 'base/_reset.css';
-@import 'base/_typography.css';
-@import 'base/_layout.css';
-@import 'base/_buttons.css';
+@import 'base/normalize.css';
+@import 'base/variables.css';
+@import 'base/reset.css';
+@import 'base/typography.css';
+@import 'base/layout.css';
+@import 'base/buttons.css';
 
 /* Components */
-@import 'components/_body.css';
-@import 'components/_portfolio.css';
-@import 'components/_nav.css';
+@import 'components/body.css';
+@import 'components/portfolio.css';
+@import 'components/nav.css';
 
 /* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
