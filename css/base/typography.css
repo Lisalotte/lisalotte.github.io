@@ -62,6 +62,11 @@
     margin: 0;
 }
 
+.small-text--light {
+    font-weight: var(--font-light);
+    line-height: 20px; 
+}
+
 .small-text--regular {
     font-weight: var(--font-regular);
     line-height: 20px;

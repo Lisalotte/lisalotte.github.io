@@ -2,11 +2,13 @@
     /* Colors */
     --color-orange-dark: #A74311;
     --color-orange-light: #DB7123;
+    --color-orange-lighter: #eabb99;;
     --color-blue-dark: #0e0f1b;
-    --color-blue-light: #27293f;
+    --color-blue-light: #3e4050;
     --color-black: #0c0809;
     --color-black-opacity: #0c080990;
     --color-beige: #FCD89E;
+    --color-white: #efe4d2;
 
     /* Theme Colors */
     --main-color: var(--color-black);
@@ -18,6 +20,7 @@
     --font-primary: 'Outfit', sans-serif;
     
     /* Font Weights */
+    --font-light: 200;
     --font-regular: 400;
     --font-medium: 500;
     --font-bold: 700;
