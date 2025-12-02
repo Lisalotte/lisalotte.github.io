@@ -7,13 +7,13 @@
 }
 
 .header--large {
-    font-size: var(--text-lg);
+    font-size: var(--text-2xl);
     font-weight: var(--font-medium);
     line-height: 1.2;
 }
 
 .header--medium {
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
     line-height: 44px;
 }
 
